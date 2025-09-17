@@ -225,3 +225,31 @@ CREATE TABLE bronze.survey_responses (
 GO
 
 
+/*
+========================================================
+Questions Import Table Creation
+========================================================
+
+Purpose: To create table for inserting questions and subquestions column.
+         later to be joined with the unpivoted survey_responses table
+Data Source: edited_survey_monkey_dataset  (excel csv file)
+Table: questions_import
+========================================================
+*/
+IF OBJECT_ID ('questions_import','U') IS NOT NULL
+	DROP TABLE questions_import
+
+Print('================================');
+Print('Creating Table questions_import');
+Print('================================');
+
+
+CREATE TABLE bronze.questions_import (
+[Raw Question] VARCHAR(255),
+[Raw Subquestion] VARCHAR(255),
+[Question] VARCHAR(255),
+[Subquestion] VARCHAR(255),
+[Question + Subquestion] VARCHAR (255)
+);
+GO
+
