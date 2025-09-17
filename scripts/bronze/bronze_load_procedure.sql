@@ -22,7 +22,6 @@ File Requirements:
 - CSV file must be located at specified path
 - First row contains column headers (skipped with FIRSTROW=2)
 - Comma-separated values format
-- File must be accessible by SQL Server service account
 
 Warnings:
 ---------
@@ -34,7 +33,8 @@ Warnings:
 Dependencies:
 ------------
 - bronze.survey_responses table must exist
-- CSV file must be present at specified location
+- CSV file must be present at specified location 
+--Change the file path path in line 66 and  82 to where your csv file is 
 - Appropriate file system permissions required
 
 Usage:
