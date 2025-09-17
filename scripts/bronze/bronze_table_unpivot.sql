@@ -118,7 +118,7 @@ SELECT
     s.[Please select the gender in which you identify.-Response] AS gender,
     s.[Which duration range best aligns with your tenure at your company?-Response] AS tenure,
     s.[Which of the following best describes your employment type?-Response] AS employement_type,
-    v.question_name AS [question+subquestion],
+    v.[question+subquestion],
     v.answer
 FROM bronze.survey_responses AS s
 CROSS APPLY (VALUES
