@@ -107,7 +107,7 @@ CREATE TABLE bronze.survey_responses (
     -- Survey Questions 1-4
     [Question 1-Response] VARCHAR(255),
     [Question 2-Response] VARCHAR(255),
-    [Question 3-Open-Ended Response] TEXT,
+    [Question 3-Open-Ended Response] VARCHAR(255),
     [Question 4-Response] VARCHAR(255),
     [Question 4-Other (please specify)] VARCHAR(255),
     
