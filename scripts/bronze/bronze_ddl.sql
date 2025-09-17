@@ -236,11 +236,11 @@ Data Source: edited_survey_monkey_dataset  (excel csv file)
 Table: questions_import
 ========================================================
 */
-IF OBJECT_ID ('questions_import','U') IS NOT NULL
-	DROP TABLE questions_import
+IF OBJECT_ID ('bronze.questions_import','U') IS NOT NULL
+	DROP TABLE bronze.questions_import
 
 Print('================================');
-Print('Creating Table questions_import');
+Print('Creating Table bronze.questions_import');
 Print('================================');
 
 
