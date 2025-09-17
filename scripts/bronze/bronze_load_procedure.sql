@@ -71,7 +71,22 @@ BEGIN
 		SET @end_time=GETDATE();
 		PRINT('Load Duration: ' + CAST(DATEDIFF(second, @start_time,@end_time)AS NVARCHAR)+'seconds');
 		
-
+		PRINT('-------------------------------');
+		PRINT('Loading quesions_import table');
+		PRINT('-------------------------------');
+		SET @start_time=GETDATE();
+		PRINT('>>Trunating Table: bronze.questions_import');
+		TRUNCATE TABLE bronze.questions_import
+		Print('>>Inserting Data into Table: bronze.questions_import');
+		BULK INSERT bronze.questions_import 
+		FROM 'D:\SQL Learning\Edited_survey_monkey_dataset\question-subquestion.csv'
+		WITH (
+		FIRSTROW=2,
+		FIELDTERMINATOR=',',
+		TABLOCK
+		);
+		SET @end_time=GETDATE()
+		PRINT('Load Duration:' + CAST(DATEDIFF(SECOND,@start_time,@end_time) AS NVARCHAR) +'seconds')
 		
 		PRINT('================================');
 		PRINT('LOADING DATA INTO BRONZE LAYER COMPLETED')
@@ -88,11 +103,8 @@ BEGIN
 	END CATCH
 	
 
-END
-
+END;
 
 GO
 
-
 EXEC bronze.load_bronze;
-
