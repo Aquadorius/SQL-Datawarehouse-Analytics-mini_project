@@ -192,8 +192,8 @@ This project is open source and available under the MIT License.
 
 ## 👤 Author
 
-**Your Name**
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/muhammad-abdullah-27aa02257)
+**Muhammad Abdullah**
+- LinkedIn: [connect on linkedin](https://linkedin.com/in/muhammad-abdullah-27aa02257)
 
 ## 🙏 Acknowledgments
 
